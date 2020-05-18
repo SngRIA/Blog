@@ -1,0 +1,14 @@
+﻿@model Blog.Models.ArticlesView
+@using Blog.Helpers
+@{
+    ViewBag.Title = "Блог";
+}
+
+<div class="content-articles">
+
+    @Html.Partial("GetArticles", Model.Articles)
+
+    <div class="page-container">
+        @Html.PageNavigation(Model.Page, u => Url.Action("Index", new { Page = u }))
+    </div>
+</div>

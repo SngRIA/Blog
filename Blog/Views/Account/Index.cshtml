@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Панель управления";
+}
+
+<h2>Панель управления</h2>
+
+<div class="account-controls">
+    <ul>
+        <li>@Html.RouteLink("Создать статью", new { controller = "Article", action = "Create" })</li>
+    </ul>
+</div>

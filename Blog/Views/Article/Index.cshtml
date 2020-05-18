@@ -1,0 +1,21 @@
+﻿@model Blog.Models.Article
+@{
+    ViewBag.Title = Model.Title;
+}
+
+<div class="article">
+    <h2>@Model.Title</h2>
+    
+    <div class="article-text">
+        @Model.Text
+    </div>
+
+    <div class="article-text">
+        @Model.Date
+    </div>
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        @Html.Partial("ArticleControls", Model)
+    }
+</div>

@@ -1,0 +1,106 @@
+﻿body {
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+a {
+    color: #6B8CA6;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #B56470;
+}
+
+header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+
+
+}
+
+header p {
+    font-size: 24px;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.content > ul {
+    padding: 15px;
+
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+
+    border-left: double;
+    border-left-color: black;/*#62ffff;*/
+}
+
+.content-articles {
+    display: block;
+    width: 100%;
+}
+
+.content-login {
+    width: -webkit-fill-available;
+}
+
+li a {
+    color: #6B8CA6;
+}
+
+.articles {
+    width: 100%;
+    margin-right: 15px;
+}
+
+.article {
+    margin-right: 15px;
+}
+
+.tags {
+    width: 208px;
+}
+
+.tags ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.article .article-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.page-container {
+    display: flex;
+    justify-content: center;
+}
+
+.page-container .page-block {
+    padding-right: 15px;
+}

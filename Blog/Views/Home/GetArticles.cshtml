@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Blog.Models.Article>
+
+<div class="articles">
+    @foreach (var article in Model)
+    {
+        <div class="article">
+            <h2>@Html.RouteLink(article.Title, new { controller = "Article", action = "Index", id = article.Id })</h2>
+
+            <div class="article-description">
+                @article.Description
+            </div>
+
+            <div class="article-controls">
+                @Html.RouteLink("Читать статью", new { controller = "Article", action = "Index", id = article.Id })
+            </div>
+        </div>
+    }
+</div>

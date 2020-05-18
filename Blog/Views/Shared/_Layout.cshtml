@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header>
+        <p> Блог </p>
+    </header>
+    <div class="container body-content">
+        <div class="content">
+            @RenderBody()
+            <ul>
+                <li>@Html.RouteLink("Главная страница", new { controller = "Home", action = "Index" })</li>
+                @if (HttpContext.Current.User.Identity.IsAuthenticated)
+                {
+                    <li>@Html.RouteLink("Профиль", new { controller = "Account", action = "Index" })</li>
+                    <li>@Html.RouteLink("Выход", new { controller = "Account", action = "Logout" })</li>
+                }
+                else
+                {
+                    <li>@Html.RouteLink("Вход", new { controller = "Account", action = "Login" })</li>
+                }
+            </ul>
+        </div>
+        <hr />
+        <footer>
+            <p>мой блог на ASP.NET</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
